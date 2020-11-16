@@ -1,10 +1,8 @@
 import React from 'react'
 
-const Formula = () => {
+const Formula = (props) => {
     return (
-        <div>
-            Hello from Formula form
-        </div>
+        <div className="formulaScreen">{props.data}</div>
     )
 }
 

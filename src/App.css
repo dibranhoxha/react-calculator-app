@@ -1,0 +1,46 @@
+button {
+	position: relative;
+	height: 65px;
+	width: 80px;
+	outline: 0.01em solid rgb(206, 156, 156);
+	border: none;
+	font-family: Share Tech Mono, monospace;
+	font-size: 20px;
+	cursor: default;
+}
+
+button:hover {
+	color: indianred;
+}
+
+.calculator {
+	padding: 5px;
+	background: rgb(255, 255, 255);
+	width: 320px;
+	position: relative;
+	border-radius: 5px;
+}
+
+.outputScreen {
+	width: inherit;
+	font-size: 29px;
+	font-family: digital;
+	color: rgb(25, 17, 83);
+	text-align: right;
+	line-height: 35px;
+	overflow-wrap: break-word;
+}
+
+.jumbo {
+	width: 160px;
+}
+
+.formulaScreen {
+	min-height: 20px;
+	font-family: digital;
+	font-size: 20px;
+	color: orange;
+	text-align: right;
+	line-height: 20px;
+	overflow-wrap: break-word;
+}

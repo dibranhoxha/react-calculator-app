@@ -1,9 +1,9 @@
 import React from 'react'
 
-export const Output = () => {
+const Output = (props) => {
     return (
-        <div>
-            Hello from Output..
+        <div className="outputScreen">
+            {props.data !== "" ? props.data : "0"}
         </div>
     )
 }
