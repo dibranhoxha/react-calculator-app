@@ -2,7 +2,7 @@ import React from 'react'
 
 const Formula = (props) => {
     return (
-        <div className="formulaScreen">{props.data}</div>
+        <div className="formulaScreen">{props.formula}</div>
     )
 }
 

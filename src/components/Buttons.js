@@ -19,6 +19,7 @@ const Buttons = (props) => {
                 style={clearStyle}
                 value="AC"
                 onClick={e => {
+                    props.setFormula("")
                     props.setData("")
                 }}
             >
@@ -29,6 +30,7 @@ const Buttons = (props) => {
                 style={operatorStyle}
                 value="/"
                 onClick={e => {
+                    props.setFormula(props.data + e.target.value)
                     props.setData(props.data + e.target.value)
                 }}
             >
@@ -39,22 +41,26 @@ const Buttons = (props) => {
                 style={operatorStyle}
                 value="*"
                 onClick={e => {
+                    props.setFormula(props.data + e.target.value)
                     props.setData(props.data + e.target.value)
                 }}
             >
                 x
         </button>
             <button id="seven" value="7" onClick={e => {
+                props.setFormula(props.data + e.target.value)
                 props.setData(props.data + e.target.value)
             }}>
                 7
         </button>
             <button id="eight" value="8" onClick={e => {
+                props.setFormula(props.data + e.target.value)
                 props.setData(props.data + e.target.value)
             }}>
                 8
         </button>
             <button id="nine" value="9" onClick={e => {
+                props.setFormula(props.data + e.target.value)
                 props.setData(props.data + e.target.value)
             }}>
                 9
@@ -64,6 +70,7 @@ const Buttons = (props) => {
                 style={operatorStyle}
                 value="‑"
                 onClick={e => {
+                    props.setFormula(props.data + e.target.value)
                     props.setData(props.data + e.target.value)
                 }}
             >
@@ -75,11 +82,13 @@ const Buttons = (props) => {
                 4
         </button>
             <button id="five" value="5" onClick={e => {
+                props.setFormula(props.data + e.target.value)
                 props.setData(props.data + e.target.value)
             }}>
                 5
         </button>
             <button id="six" value="6" onClick={e => {
+                props.setFormula(props.data + e.target.value)
                 props.setData(props.data + e.target.value)
             }}>
                 6
@@ -89,22 +98,26 @@ const Buttons = (props) => {
                 style={operatorStyle}
                 value="+"
                 onClick={e => {
+                    props.setFormula(props.data + e.target.value)
                     props.setData(props.data + e.target.value)
                 }}
             >
                 +
         </button>
             <button id="one" value="1" onClick={e => {
+                props.setFormula(props.data + e.target.value)
                 props.setData(props.data + e.target.value)
             }}>
                 1
         </button>
             <button id="two" value="2" onClick={e => {
+                props.setFormula(props.data + e.target.value)
                 props.setData(props.data + e.target.value)
             }}>
                 2
         </button>
             <button id="three" value="3" onClick={e => {
+                props.setFormula(props.data + e.target.value)
                 props.setData(props.data + e.target.value)
             }}>
                 3
@@ -114,6 +127,7 @@ const Buttons = (props) => {
                 id="zero"
                 value="0"
                 onClick={e => {
+                    props.setFormula(props.data + e.target.value)
                     props.setData(props.data + e.target.value)
                 }}
             >
@@ -126,17 +140,13 @@ const Buttons = (props) => {
                 id="equals"
                 style={equalsStyle}
                 value="="
+                onClick={e => {
+                    // eslint-disable-next-line no-eval
+                    props.setFormula(props.data + e.target.value + String(eval(props.data)))
+                    // eslint-disable-next-line no-eval
+                    props.setData(String(eval(props.data)))
 
-            // try {
-            //     String(eval(props.data)).length > 3 &&
-            //         String(eval(props.data)).includes('.')
-            //         ? String(eval(props.data).toFixed(4))
-            //         : String(eval(props.data))
-
-            // }
-            // catch (err) {
-            //     console.log(err);
-            // }
+                }}
             >
                 =
         </button>

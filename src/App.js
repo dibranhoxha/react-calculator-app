@@ -6,12 +6,13 @@ import './App.css';
 
 function App() {
   const [data, setData] = useState("");
+  const [formula, setFormula] = useState("");
   return (
     <div className="calculator">
 
-      <Formula data={data} />
+      <Formula formula={formula} />
       <Output data={data} />
-      <Buttons data={data} setData={setData} />
+      <Buttons data={data} setData={setData} setFormula={setFormula} />
 
     </div>
   );
