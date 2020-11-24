@@ -9,7 +9,6 @@ function App() {
   const [formula, setFormula] = useState("");
   return (
     <div className="calculator">
-
       <Formula formula={formula} />
       <Output data={data} />
       <Buttons data={data} setData={setData} setFormula={setFormula} />

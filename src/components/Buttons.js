@@ -141,10 +141,15 @@ const Buttons = (props) => {
                 style={equalsStyle}
                 value="="
                 onClick={e => {
-                    // eslint-disable-next-line no-eval
-                    props.setFormula(props.data + e.target.value + String(eval(props.data)))
-                    // eslint-disable-next-line no-eval
-                    props.setData(String(eval(props.data)))
+                    try {
+
+                        props.setFormula(props.data + e.target.value + String(eval(props.data)))
+
+                        props.setData(String(eval(props.data)))
+                    }
+                    catch (err) {
+                        props.setData("Error!")
+                    }
 
                 }}
             >
